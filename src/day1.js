@@ -8,5 +8,5 @@ const sequenceDigits = (sequence) => sequence.reduce((acc, digit, index) => {
         return acc;
     }, 0);
 
-const day1 = sequence => sequenceDigits(intArray(sequence));
-export default { day1 }
+const exercise1 = sequence => sequenceDigits(intArray(sequence));
+export default { exercise1 }
