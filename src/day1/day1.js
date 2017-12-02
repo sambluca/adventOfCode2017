@@ -7,7 +7,6 @@ const sequenceDigits1 = (sequence) => sequence.reduce((acc, digit, index) => {
         return acc;
     }, 0);
 
-
 const sequenceDigits2 = (sequence) => sequence.reduce((acc, digit, index) => {
     const nextDigit = sequence[index + sequence.length / 2] ;
         if(nextDigit == digit || !nextDigit && digit == sequence[index - sequence.length / 2]) {
@@ -16,9 +15,6 @@ const sequenceDigits2 = (sequence) => sequence.reduce((acc, digit, index) => {
         return acc;
     }, 0);
     
-
 const exercise1 = sequence => sequenceDigits1(intArray(sequence));
-
 const exercise2 = sequence => sequenceDigits2(intArray(sequence));
-
 export default { exercise1, exercise2 }
