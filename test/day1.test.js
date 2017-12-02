@@ -1,5 +1,5 @@
-import { exercise1, exercise2 } from '../src/day1';
-import data from './data/day1';
+import { exercise1, exercise2 } from '../src/day1/day1';
+import data from '../data/day1';
 
 describe('exercise 1', ()=> {
     test('1122 produces a sum of 3', () => {
