@@ -56,7 +56,7 @@ describe('exercise 2', ()=> {
 
     test('test data', () => {
         const answer = exercise2(data);
-        expect(answer).toEqual(1182);
+        expect(answer).toEqual(1152);
     });
 
 });

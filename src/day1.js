@@ -1,4 +1,3 @@
-import template from '../src/day1';
 const intArray = (a = data) => a.split('').map(Number);
 const sequenceDigits1 = (sequence) => sequence.reduce((acc, digit, index) => {
     const nextDigit = sequence[index+1];
