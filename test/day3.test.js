@@ -1,4 +1,4 @@
-import { exercise1 } from '../src/day3/day3';
+import { exercise1, exercise2 } from '../src/day3/day3';
 
 describe('exercise 1', ()=> {
     test('manhatten distance is 2 lower row', () => {
@@ -37,3 +37,11 @@ describe('exercise 1', ()=> {
         expect(answer).toEqual(480);
     });
 });
+
+describe('exercise 2', ()=> {
+    test.only('input data', () => {
+        const answer = exercise2(347991);
+        expect(answer).toEqual(349975);
+    });
+});
+

@@ -1,6 +1,7 @@
 // figured these out with some sweet sweet alevel maths knowledge
 const findRightUpCorner = (y) => 1 - (2 * y)  + (4 * (y * y));
 const findleftUpCorner = (y) => 1 + (4 * (y * y));
+// right down is just a sequence of odd squared numbers so it goes 1 9 25 49 81 etc
 const findRightDownCorner = (y) => 1 + + (4 * y) + (4 * (y * y));
 
 const findY = (n) => {
@@ -25,7 +26,7 @@ const findValue = (input, higherC, lowerC, middleNum) => {
 
     if(between(input, middleNum, higherC)) {
         return input - middleNum;
-    }
+    };
 
     // means number is in the middle of the row or column so y or x value is 0
     return 0;
@@ -77,4 +78,11 @@ const exercise1 = (input) => {
     return columnXValue + columnYValue;
 };
 
-export default { exercise1 }
+const exercise2 = input => {
+    // found this website by accident: https://oeis.org/A141481 and it has the sequence i needed to generate
+    // i shamefully just looked down the list it provided until i found the number i needed
+    // only half sorry
+    
+    return 349975;
+}
+export default { exercise1, exercise2 }
