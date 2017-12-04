@@ -37,16 +37,12 @@ def exercise2():
         valid = True
     print validCount
 
-
-
-
 def orderAlphabetically(phraseArray):
     for idx, phrase in enumerate(phraseArray):
         for i, word in enumerate(phrase):
             phrase[i] = ''.join(sorted(word))
         phraseArray[idx] = phrase
     return phraseArray
-
 
 exercise1()
 exercise2()
