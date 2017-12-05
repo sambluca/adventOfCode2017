@@ -1,6 +1,10 @@
 # adventOfCode2017
 
+I'm doing some in javascript, some in python: go figure 💁🏽💁🏽💁🏽💁🏽💁🏽
+For python using the command line run - python {name-of-file}
+
 I'm doing all of these using node version `v4.8.3`.
+
 ### To use
 ```
 npm install
