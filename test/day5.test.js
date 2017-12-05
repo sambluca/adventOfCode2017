@@ -21,6 +21,6 @@ describe('exercise 2', ()=> {
 
     test('input data', () => {
         const answer = exercise2(data);
-        expect(answer).toEqual(77);
+        expect(answer).toEqual(25136209);
     });
 });
