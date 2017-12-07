@@ -1,5 +1,3 @@
-import numpy as np
-
 def readfile():
     with open("day6.txt", 'r') as f: # actual data
     # with open("day6test.txt", 'r') as f: # test file    
