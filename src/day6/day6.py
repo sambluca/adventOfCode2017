@@ -10,7 +10,7 @@ def readfile():
                 bank[index] = int(float(block))
     return bank
 
-def exercise1():
+def exercises():
     dataBlock = readfile()
     seenBlocks = []
     noDuplicates = True
@@ -26,6 +26,9 @@ def exercise1():
              distribute -= 1         
          if dataBlock in seenBlocks:
              noDuplicates = False
+    print 'exercise 1'
     print len(seenBlocks)
+    print 'exercise 2'
+    print len(seenBlocks) - seenBlocks.index(dataBlock)
          
-exercise1()
+exercises()
