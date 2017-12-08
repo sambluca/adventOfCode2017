@@ -42,12 +42,11 @@ def runInstruction():
     registerDict = registerNInstruction[0]
     instructionDict = registerNInstruction[1]
     highestValue = 0
-    modifiedValue = 0
     for instruction in instructionDict:
         modify = modifyCheckValue(instructionDict[instruction]['instruction'], registerDict)
         if modify:
             registerValue = int(registerDict[instructionDict[instruction]['instructionToMod']])
-            modifier = int(float(instructionDict[instruction]['modifyBy']))
+            modifier = int(instructionDict[instruction]['modifyBy'])
             operation = instructionDict[instruction]['operation']
             modifiedValue = operation(registerValue, modifier)
             registerDict[instructionDict[instruction]['instructionToMod']] = modifiedValue
