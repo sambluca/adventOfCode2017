@@ -3,10 +3,12 @@ import sys
 import os
 import operator
 def readfile():
-    fileArray = []
+    registerDict = {}
+    instructionDict = {}
     with open("day8.txt", 'r') as f:
         operations = []
-        for line in f:
+        for index, line in enumerate(f):
+            instructionDict[index] = {}
             lineArray = line.rstrip("\n")
             if 'inc' in lineArray:
                 lineArray = lineArray.split(' inc ')
@@ -14,19 +16,14 @@ def readfile():
             else:
                 lineArray = lineArray.split(' dec ')
                 operations.append(operator.sub)
-            fileArray.append(lineArray)
-        registerDict = {}
-        instructionDict = {}
-        for index, instruction in enumerate(fileArray):
+            instruction = lineArray
             if instruction[0] not in registerDict:
                 registerDict[instruction[0]] = 0
-            instructionDict[index] = {}
             i = instruction[1].split(' if ')
             instructionDict[index]['modifyBy'] = i[0]
             instructionDict[index]['instruction'] = i[1]
             instructionDict[index]['instructionToMod'] = instruction[0]
             instructionDict[index]['operation'] = operations[index]
-    
     return registerDict, instructionDict
 
 def modifyCheckValue(instruction, registerDict):
@@ -52,7 +49,6 @@ def runInstruction():
             registerDict[instructionDict[instruction]['instructionToMod']] = modifiedValue
         highestValue = modifiedValue if modifiedValue > highestValue else highestValue #exercise 2
     maxValue = registerDict[max(registerDict, key=registerDict.get)]
-    
     print 'exercise1: ' + str(maxValue)
     print 'exericise2: ' + str(highestValue)
 
