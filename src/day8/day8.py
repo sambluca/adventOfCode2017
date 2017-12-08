@@ -53,6 +53,8 @@ def runInstruction():
             registerDict[instructionDict[instruction]['instructionToMod']] = modifiedValue
         highestValue = modifiedValue if modifiedValue > highestValue else highestValue #exercise 2
     maxValue = registerDict[max(registerDict, key=registerDict.get)]
-    print highestValue
-    return maxValue
-print runInstruction()
+    
+    print 'exercise1: ' + str(maxValue)
+    print 'exericise2: ' + str(highestValue)
+
+runInstruction()
